@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBSO</title>
+    <link rel="stylesheet" href="css.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script> 
+
+</head>
+
+<header>
+    <section class="info">
+        <img src="logoc.png" class="logo">
+    <section>
+</header>
+
+
+
+
+<body>
+    <div class="video-container">
+        <video class="film_main" src="film.mp4" autoplay muted playsinline loop></video>
+        <section class="season">
+            <h1 class="playfair-display">2025/2026 Season</h1>
+            <h2 class="playfair-display">2025/2026 Season Title</h2>
+        </section>
+    </div>
+</body>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.to(".season", {
+    scrollTrigger: {
+      trigger: ".video-container",
+      start: "top top",         // When video-container hits top of viewport
+      end: "bottom center",        // When video-container leaves the viewport
+      scrub: true,              // Smooth transition on scroll
+    },
+    opacity: 0,                 // Fade out
+  });
+</script>
