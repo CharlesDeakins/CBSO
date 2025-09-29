@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CBSO</title>
+    <link rel="icon" href="favicon.png" type="image/png">
     <link rel="stylesheet" href="css.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,24 +27,30 @@
 
 <body>
     <div class="video-container">
-        <video class="film_main" src="film.mp4" autoplay muted playsinline loop></video>
+        <video id="video_main" class="film_main" src="film.mp4" autoplay muted playsinline loop></video>
         <section class="season">
             <h1 class="playfair-display">2025/2026 Season</h1>
             <h2 class="playfair-display">2025/2026 Season Title</h2>
         </section>
     </div>
+
+    <div class="directors">
+        <h3 class="playfair-display">Meet Our Directors</h3>
+
+    </div>
 </body>
 
 <script>
-  gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger);
 
-  gsap.to(".season", {
-    scrollTrigger: {
-      trigger: ".video-container",
-      start: "top top",         // When video-container hits top of viewport
-      end: "bottom center",        // When video-container leaves the viewport
-      scrub: true,              // Smooth transition on scroll
-    },
-    opacity: 0,                 // Fade out
-  });
+    gsap.to(".season", {
+        scrollTrigger: {
+        trigger: ".video-container",
+        start: "top top",        
+        end: "bottom center",      
+        scrub: true,              
+        },
+        opacity: 0,  
+    });
+
 </script>
