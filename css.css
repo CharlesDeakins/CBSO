@@ -24,11 +24,13 @@ body{
 }
 
 a{
-    margin-top: 2vw;
+    margin-top: 2.3vw;
     margin-left: 4vw;
-    font-size: 1vw;
+    font-size: 0.8vw;
     mix-blend-mode: difference;
     color: white;
+
+    letter-spacing: 0.4vw;
 
     position: fixed;  
     z-index: 3;
@@ -51,14 +53,12 @@ a{
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.4vw;
 }
 
 .playfair-display{
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-weight: 300;
-  font-style: normal;
 }
 
 h1{
@@ -73,6 +73,23 @@ h2{
 
 h3{
     font-size: 3vw;
+    color: black;
+}
+
+h4{
+    font-size: 2vw;
+    color: black;
+}
+
+h5{
+    font-size: 1.2vw;
+    color: rgb(53, 53, 53);
+    text-transform: uppercase;
+
+}
+
+h6{
+    font-size: 1vw;
     color: black;
 }
 
@@ -135,12 +152,13 @@ h3{
 }
 
 .profile-photo{
-    height: 25vw;
+    height: 15vw;
 }
 
 .profile-text{
     text-align: left;
     margin-left: 3vw;
+    margin-right: 3vw;
 }
 
 

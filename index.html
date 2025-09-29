@@ -32,18 +32,40 @@
         </section>
     </div>
 
-    <div class="directors">
-        <h3 class="playfair-display">Meet Our Directors</h3>
+    <div id="conductors-A" class="directors">
+        <h3 class="playfair-display">Meet Our Conductors</h3>
         <section class="profile">
+            <img src="Director-A.jpg" class="profile-photo">
+            <section class="profile-text">
+                <h4 class="playfair-display">Johannes Eberhart</h4>
+                <h5 class="playfair-display">Conductor</h5>
+                <h6 class="playfair-display">Bio</h6>
+            </section>
 
             <img src="Director-A.jpg" class="profile-photo">
-
             <section class="profile-text">
-                <h4>info about the directors</h4>
+                <h4 class="playfair-display">Nathan Ng</h4>
+                <h5 class="playfair-display">Assistant Conductor</h5>
+                <h6 class="playfair-display">Bio</h6>
             </section>
 
         </section>
     </div>
+
+    <div id="conductors-B" class="directors">
+        <h3 class="playfair-display">About CBSO</h3>
+        <section class="profile">
+            <img src="Director-A.jpg" class="profile-photo">
+            <section class="profile-text">
+                <h4 class="playfair-display">Johannes Eberhart</h4>
+                <h5 class="playfair-display">Conductor</h5>
+                <h6 class="playfair-display">Bio</h6>
+            </section>
+
+        </section>
+    </div>
+
+
 </body>
 
 <script>
@@ -54,6 +76,16 @@
         trigger: ".video-container",
         start: "top top",        
         end: "bottom center",      
+        scrub: true,              
+        },
+        opacity: 0,  
+    });
+
+    gsap.to("#conductors-A", {
+        scrollTrigger: {
+        trigger: "#conductors-B",
+        start: "top bottom",        
+        end: "top center",      
         scrub: true,              
         },
         opacity: 0,  
