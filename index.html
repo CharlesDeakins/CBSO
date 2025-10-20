@@ -20,9 +20,9 @@
     <a href="index.html" class="logo-link">
         <img src="logoc.png" class="logo">
     </a>
-    <a class="oswald" style="margin-left: 10vw;" href="contact.html">CONTACT</a>
-    <a class="oswald" style="margin-left: 20.5vw;">ABOUT US</a>
-    <a class="oswald" style="margin-left: 32vw;">ALUM</a>
+    <a href="#footer" class="oswald" style="margin-left: 10vw;">CONTACT</a>
+    <a href="#about-us" class="oswald" style="margin-left: 20.5vw;">ABOUT US</a>
+    <a href="members.html" class="oswald" style="margin-left: 32vw;">MEMBERS</a>
 </header>
 
 <body>
@@ -89,7 +89,7 @@
         </section>
     </div>
 
-    <div id="conductors-B" class="directors">
+    <div id="about-us" class="directors">
         <h3 class="playfair-display">About CBSO</h3>
         <section class="profile">
             <img src="Director-A.jpg" class="profile-photo">
@@ -103,7 +103,7 @@
     </div>
 </body>
 
-<footer>
+<footer id = "footer">
     <img src="logoc.png" class="logo" style="position: relative">
     <a class="foot" href="contact.html">CONTACT</a>
     <a class="foot" href="contact.html">CONTACT</a>
@@ -129,6 +129,7 @@
             start: "top 90%",
             end: "top center",
             scrub: true,
+            markers: true,
         },
         opacity: 0,
     });
@@ -136,10 +137,11 @@
 
     gsap.to("#conductors-A", {
         scrollTrigger: {
-        trigger: "#conductors-B",
+        trigger: "#about-us",
         start: "top bottom",        
         end: "top center",      
-        scrub: true,              
+        scrub: true,
+        markers: true,              
         },
         opacity: 0,  
     });
