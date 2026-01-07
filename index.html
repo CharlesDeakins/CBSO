@@ -101,14 +101,39 @@
 
         </section>
     </div>
-</body>
 
-<footer id = "footer">
-    <img src="logoc.png" class="logo" style="position: relative">
-    <a class="foot" href="contact.html">CONTACT</a>
-    <a class="foot" href="contact.html">CONTACT</a>
-    <a class="foot" href="contact.html">CONTACT</a>
-</footer>
+    <footer id = "footer">
+        <div class = "footer-inner">
+            <img src="logoc.png" class="logo" style="position: relative">
+            
+            <nav class="footer-links">
+                <a class="foot" href="https://www.instagram.com/cbso.ucla/?hl=en">
+                    <img src="insta.png" class= "contact-logo">
+                    <span>Instagram</span>
+                </a>
+                <a class="foot" href="https://www.youtube.com/@conbriostringorchestra">
+                    <img src="youtube.png" class="contact-logo">
+                    <span>Youtube</span>
+                </a>
+                <a class="foot" href="https://www.facebook.com/cbso.ucla/">
+                    <img src="facebook.png" class="contact-logo">
+                    <span>Facebook</span>
+                </a>
+                <a class="foot" href="https://www.linkedin.com/company/con-brio-string-orchestra">
+                    <img src="linkedin.png" class="contact-logo">
+                    <span>LinkedIn</span>
+                </a>
+                <a class="foot" href="contact.html">
+                    <img src="email.png" class="contact-logo">
+                    <span>Email</span>
+                </a>
+                <a class="foot" href="contact.html">
+                    <img src="join.png" class="contact-logo">
+                    <span>Join CBSO</span>
+                </a>
+        </div>
+    </footer>
+</body>
 
 <script>
     gsap.registerPlugin(ScrollTrigger);
@@ -129,7 +154,6 @@
             start: "top 90%",
             end: "top center",
             scrub: true,
-            markers: true,
         },
         opacity: 0,
     });
@@ -140,8 +164,7 @@
         trigger: "#about-us",
         start: "top bottom",        
         end: "top center",      
-        scrub: true,
-        markers: true,              
+        scrub: true,              
         },
         opacity: 0,  
     });

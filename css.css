@@ -23,7 +23,7 @@ body{
     z-index: 3;
 }
 
-a{
+header a{
     margin-top: 2.3vw;
     margin-left: 4vw;
     font-size: 0.8vw;
@@ -37,17 +37,26 @@ a{
     text-decoration: none;
 }
 
+a{
+    position: static;
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+    letter-spacing: inherit;
+}
+
 
 .logo {
     mix-blend-mode: difference;
     color: white;
     height: 4vw;
 
+    z-index: 3;
+}
+header .logo{
     position: fixed;
     top: 1vw;
     left: 1vw;
-
-    z-index: 3;
 }
 
 .logo-link{
@@ -312,6 +321,53 @@ h6{
 
 footer{
     background-color: rgb(33, 33, 33);
-    height: 5vw;
+    padding: 3vw 2vw;
+    position: relative;
 
+}
+
+footer .logo{
+    margin: 0; 
+    position: static;
+    height: 4vw;
+    mix-blend-mode: difference;
+}
+
+footer a{
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 0.12em;
+    position: static;
+}
+
+.footer-links{
+    display: flex;
+    gap: 5vw;
+    padding: 1.5vw;
+}
+
+.footer-inner{
+    display: flex;
+    align-items: flex-start;
+    gap: 2vw;
+}
+
+footer .foot {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+
+    position: static;
+    color: white;
+    mix-blend-mode: normal;
+    font-size: 1rem;
+    letter-spacing: 0.12em;
+    margin: 0;
+    text-decoration: none;
+}
+
+.contact-logo{
+    height: 1.2vw;
+    width: auto;
+    display: block;
 }
