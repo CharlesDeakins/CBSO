@@ -319,6 +319,10 @@ h6{
     z-index: 2;
 }
 
+#about-us{
+    height: 90vh;
+}
+
 footer{
     background-color: rgb(33, 33, 33);
     padding: 3vw 2vw;
