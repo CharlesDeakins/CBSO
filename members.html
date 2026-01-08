@@ -31,6 +31,85 @@
             <h2 class="playfair-display">Members</h2>
         </section>
     </div>
+    <div class="board">
+        <h3 id="board-header"class="playfair-display">Board Members</h3>
+        <section id="members-row-1"class="profile">
+            <img id="member-img-1" class="profile-photo" src="Director-A.jpg">
+            <section class="profile-text">
+                <h4 class="playfair-display">Board Member1</h4>
+                <h5 class="playfair-display">Position</h5>
+                <h6 class="playfair-display">Bio</h6>
+            </section>
+            
+            <img id="member-img-2" class="profile-photo" src="Director-A.jpg">
+            <section class="profile-text">
+                <h4 class="playfair-display">Board Member2</h4>
+                <h5 class="playfair-display">Position</h5>
+                <h6 class="playfair-display">Bio</h6>
+            </section>
+            
+            <img id="member-img-3" class="profile-photo" src="Director-A.jpg">
+            <section class="profile-text">
+                <h4 class="playfair-display">Board Member3</h4>
+                <h5 class="playfair-display">Position</h5>
+                <h6 class="playfair-display">Bio</h6>
+            </section>
+        </section>
+        <section id="members-row-2"class="profile">
+            <img id="member-img-1" class="profile-photo" src="Director-A.jpg">
+            <section class="profile-text">
+                <h4 class="playfair-display">Board Member4</h4>
+                <h5 class="playfair-display">Position</h5>
+                <h6 class="playfair-display">Bio</h6>
+            </section>
+            
+            <img id="member-img-2" class="profile-photo" src="Director-A.jpg">
+            <section class="profile-text">
+                <h4 class="playfair-display">Board Member5</h4>
+                <h5 class="playfair-display">Position</h5>
+                <h6 class="playfair-display">Bio</h6>
+            </section>
+            
+            <img id="member-img-3" class="profile-photo" src="Director-A.jpg">
+            <section class="profile-text">
+                <h4 class="playfair-display">Board Member6</h4>
+                <h5 class="playfair-display">Position</h5>
+                <h6 class="playfair-display">Bio</h6>
+            </section>
+        </section>
+    </div>
+    <footer id = "footer">
+            <div class = "footer-inner">
+                <img src="logoc.png" class="logo" style="position: relative">
+                
+                <nav class="footer-links">
+                    <a class="foot" href="https://www.instagram.com/cbso.ucla/?hl=en">
+                        <img src="insta.png" class= "contact-logo">
+                        <span>Instagram</span>
+                    </a>
+                    <a class="foot" href="https://www.youtube.com/@conbriostringorchestra">
+                        <img src="youtube.png" class="contact-logo">
+                        <span>Youtube</span>
+                    </a>
+                    <a class="foot" href="https://www.facebook.com/cbso.ucla/">
+                        <img src="facebook.png" class="contact-logo">
+                        <span>Facebook</span>
+                    </a>
+                    <a class="foot" href="https://www.linkedin.com/company/con-brio-string-orchestra">
+                        <img src="linkedin.png" class="contact-logo">
+                        <span>LinkedIn</span>
+                    </a>
+                    <a class="foot" href="contact.html">
+                        <img src="email.png" class="contact-logo">
+                        <span>Email</span>
+                    </a>
+                    <a class="foot" href="contact.html">
+                        <img src="join.png" class="contact-logo">
+                        <span>Join CBSO</span>
+                    </a>
+                </nav>    
+            </div>
+        </footer> 
 
 <script>
     gsap.registerPlugin(ScrollTrigger);
@@ -43,5 +122,36 @@
         scrub: true,              
         },
         opacity: 0,  
+    });
+
+    gsap.to("#board-header", {
+        scrollTrigger: {
+        trigger: "#footer",
+        start: "30% 40%",        
+        end: "30% 15%",      
+        scrub: true, 
+        markers: true,           
+        }, 
+        opacity: 0, 
+    });
+
+    gsap.to("#members-row-1", {
+        scrollTrigger: {
+            trigger: "#members-row-2",
+            start: "top bottom",
+            end: "top center",
+            scrub: true,
+        },
+        opacity: 0,
+    });
+
+     ScrollTrigger.create({
+        trigger: "#board-header",
+        start: "top top-=100vh",
+        end: "top top-=600vh",
+        pin: true,
+        pinSpacing: false,
+        scrub: true,
+        markers: true,
     });
 </script>
