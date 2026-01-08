@@ -232,21 +232,23 @@ h6{
     width: 100%;
     height: 100vh;
     
-    padding: 5vw;
+    padding: 10vw;
+    padding-top: 5vw;
 
     position: sticky;
     top: 0vw;
 }
 
-.upcoming{
-    padding: 2rem;
-}
+
 
 .upcoming-container{
     display: flex;
     justify-content: center;
     gap: 1.5rem;
     flex-wrap: wrap;
+
+    margin-right: 7vw;
+    margin-left: 7vw;
 }
 
 .event-link-box{
@@ -256,17 +258,21 @@ h6{
     justify-content: flex-start;
     font-size: 1.35rem;
 
-    width: 23vw;
+    width: 30vw;
     min-width: 240px;
     height: 30vh;
     padding: 1.3vw;
-    
+
+    margin-right: auto;
+    margin-left: auto;
+
+
     background: url("laphil.avif");
     background-size: cover;
     color:whitesmoke;
     text-decoration: center;
     text-align: center;
-    border-radius: 1vh;
+    border-radius: 0.7vh;
     overflow: hidden;
 
     white-space: normal;
@@ -309,23 +315,30 @@ h6{
 }
 
 .event-link-box .title{
+    font-family: "Playfair Display", serif;
+    font-weight: 300;
+
     margin: 0;
     margin-bottom: auto;
     width: 100%;
-    letter-spacing: .05em;
+    letter-spacing: .1em;
     text-align: left;
-    font-size: 1.4rem;
-    font-weight: 100;
+    font-size: 1.2rem;
     line-height: 2rem;
     user-select: none;
     z-index: 2;
+
+    
 }
 
 .event-link-box .details{
+    font-family: "Playfair Display", serif;
+    color: rgb(198, 198, 198);
+
     margin: 0;
     width: 100%;
     letter-spacing: .05em;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-align: left;
     line-height: 1.5rem;
     user-select: none;
