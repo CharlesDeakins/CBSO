@@ -392,6 +392,8 @@ footer .foot {
 #board-header{
     padding-left: 10vw;
     padding-top: 10vw;
+    position: sticky;
+    top:0;
 }
 
 .board img{
