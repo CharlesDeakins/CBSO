@@ -342,6 +342,9 @@ footer a{
     font-size: 1rem;
     letter-spacing: 0.12em;
     position: static;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .footer-links{
@@ -362,9 +365,9 @@ footer .foot {
     gap: .8rem;
 
     position: static;
-    color: white;
+    color: rgb(186, 186, 186);
     mix-blend-mode: normal;
-    font-size: 1rem;
+    font-size: 0.7rem;
     letter-spacing: 0.12em;
     margin: 0;
     text-decoration: none;
