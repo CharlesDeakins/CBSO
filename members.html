@@ -33,6 +33,7 @@
     </div>
     <div class="board">
         <h3 id="board-header"class="playfair-display">Board Members</h3>
+
         <section id="members-row-1"class="profile">
             <img id="member-img-1" class="profile-photo" src="Director-A.jpg">
             <section class="profile-text">
@@ -55,6 +56,7 @@
                 <h6 class="playfair-display">Bio</h6>
             </section>
         </section>
+        
         <section id="members-row-2"class="profile">
             <img id="member-img-1" class="profile-photo" src="Director-A.jpg">
             <section class="profile-text">
@@ -126,9 +128,9 @@
 
     gsap.to("#board-header", {
         scrollTrigger: {
-        trigger: "#footer",
-        start: "30% 40%",        
-        end: "30% 15%",      
+        trigger: "#members-row-2",
+        start: "top center",        
+        end: "top top",      
         scrub: true, 
         markers: true,           
         }, 
@@ -137,15 +139,16 @@
 
     gsap.to("#members-row-1", {
         scrollTrigger: {
-            trigger: "#members-row-2",
-            start: "top bottom",
-            end: "top center",
+            trigger: "#board-header",
+            start: "top top",
+            end: "top top-=100vw",
             scrub: true,
         },
         opacity: 0,
     });
 
-     ScrollTrigger.create({
+    /*
+    ScrollTrigger.create({
         trigger: "#board-header",
         start: "top top-=100vh",
         end: "top top-=600vh",
@@ -154,4 +157,5 @@
         scrub: true,
         markers: true,
     });
+    */
 </script>
