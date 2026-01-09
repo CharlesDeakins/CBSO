@@ -111,11 +111,11 @@ h6{
 
 .season{
     position: fixed;
+    left: 7vw;
+    top: 70vh;
+
     z-index: 2;
 
-    top: 65%;
-    left: 25%;
-    transform: translate(-50%, -50%)
 }
 
 .video-container{
