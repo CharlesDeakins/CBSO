@@ -267,7 +267,6 @@ h6{
     margin-left: auto;
 
 
-    background: url("laphil.avif");
     background-size: cover;
     color:whitesmoke;
     text-decoration: center;
@@ -286,6 +285,26 @@ h6{
     transition: box-shadow .25s ease, transform .25s ease;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
     will-change: transform, box-shadow;
+}
+
+#link-box-a{
+    background: url("events-media/IMG_9649-edited.png");
+    background-size: cover;
+    color:whitesmoke;
+    text-decoration: center;
+    text-align: center;
+    border-radius: 1vh;
+    overflow: hidden;
+}
+
+#link-box-b{
+    background: url("events-media/IMG_9659-edited.png");
+    background-size: cover;
+    color:whitesmoke;
+    text-decoration: center;
+    text-align: center;
+    border-radius: 0.7vh;
+    overflow: hidden;
 }
 
 .event-link-box::after {
