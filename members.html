@@ -320,12 +320,12 @@
         start: "top center",        
         end: "top center-=200vh",      
         scrub: true, 
-        markers: true,           
+        markers: true,          
         }, 
         opacity: 0, 
     });
 
-    gsap.to("#alum-header", {
+    /*gsap.to("#alum-header", {
         scrollTrigger: {
         trigger: "#members-row-5",
         start: "top center-=200vh",        
@@ -334,7 +334,7 @@
         markers: true,           
         }, 
         opacity: 0, 
-    });
+    });*/
 
     
     gsap.to("#members-row-1", {
@@ -366,6 +366,39 @@
         },
         opacity: 0,
     });
+
+    gsap.to("#members-row-5", {
+        scrollTrigger: {
+            trigger: "#members-row-6",
+            start: "top center-=180vh",
+            end: "top center-=180vh",
+            scrub: true,
+        },
+        opacity: 0,
+    });
+
+    gsap.to("#members-row-6", {
+        scrollTrigger: {
+            trigger: "#members-row-7",
+            start: "top center-=180vh",
+            end: "top center-=180vh",
+            scrub: true,
+        },
+        opacity: 0,
+    });
+
+    gsap.to("#members-row-7", {
+        scrollTrigger: {
+            trigger: "#members-row-8",
+            start: "top center-=180vh",
+            end: "top center-=180vh",
+            scrub: true,
+        },
+        opacity: 0,
+    });
+
+
+
 
 
 
