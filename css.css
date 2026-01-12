@@ -433,8 +433,9 @@ footer .foot {
     display: block;
 }
 
-.board {
-    margin-bottom: 10vw;
+#alum{
+    margin-bottom: 3vw;
+    height: 80vh;
 }
 
 .board .profile{
@@ -468,4 +469,14 @@ footer .foot {
     font-size: .7vw;
 }
 
-
+#alum-header{
+    padding-top: 0vw !important;
+    margin-bottom: 0vw !important;
+    top: 15vh !important;
+    background: linear-gradient(
+        to top,
+        rgb(243, 238, 244) 0%,
+        rgb(243, 238, 244) 50%,
+        rgb(243, 238, 244) 100%
+    );
+}
