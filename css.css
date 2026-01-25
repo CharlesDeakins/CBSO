@@ -612,10 +612,12 @@ footer .foot {
 
     .event-link-box .title{
         font-size: 4vw;
+        line-height: 2rem;
     }
 
     .event-link-box .details{
         font-size: 4vw;
+        line-height: 1.5rem;
     }
 
     .directors{
