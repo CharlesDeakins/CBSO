@@ -13,30 +13,35 @@
         
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script> 
-
 </head>
 
-<header>
+<header >
     <a href="index.html" class="logo-link">
         <img src="logoc.png" class="logo">
     </a>
+    <h2 id="mobile-section-titles" class="mobile-section-titles"></h2>
     <a href="#footer" class="oswald" style="margin-left: 10vw;">CONTACT</a>
     <a href="#conductors-A" class="oswald" style="margin-left: 20.5vw;">ABOUT US</a>
     <a href="members.html" class="oswald" style="margin-left: 32vw;">MEMBERS</a>
+    <a class="link-button">_<br>_<br>_<br></a>
+
 </header>
 
+
 <body>
-    <div class="video-container">
-        <video id="video_main" class="film_main" src="film-edited.mp4.mov" autoplay muted playsinline loop></video>
-        <section class="season">
-            <h1 class="playfair-display">Winter 2026 Season</h1>
-            <h2 class="playfair-display">Mendelssohn, Bartók, Hisaishi, and Price</h2>
-        </section>
-    </div>
+    <section data-title="">
+        <div class="video-container">
+            <video id="video_main" class="film_main" src="film-edited.mp4.mov" autoplay muted playsinline loop></video>
+            <section class="season" data-title="">
+                <h1 class="playfair-display">Winter 2026 Season</h1>
+                <h2 class="playfair-display">Mendelssohn, Bartók, Hisaishi, and Price</h2>
+            </section>
+        </div>
+    </section>
 
     <div id="all-events" class="events">
-        <section class="upcoming">
-            <h2 class="playfair-display" style="text-align: center; color:black">Upcoming Events</h2>
+        <section class="upcoming" data-title="Upcoming Events">
+            <h2 id="section-title-a-desktop" class="playfair-display" style="text-align: center; color:black">Upcoming Events</h2>
             <h1 class="playfair-display" style="color: black;">&nbsp;</h1>
             
             <div class="upcoming-container">
@@ -64,19 +69,19 @@
     </div>
 
     <div id="conductors-A" class="directors">
-        <h3 class="playfair-display">Meet Our Conductors</h3>
-        <section class="profile">
+        <h3 id="section-title-b-desktop" class="playfair-display">Meet Our Conductors</h3>
+        <section id="profile-a" class="profile" data-title="Meet Our Conductors">
             <img src="Director-A.png" class="profile-photo">
-            <section class="profile-text">
+            <section class="profile-text" data-title="Meet Our Conductors">
                 <h4 class="playfair-display">Johannes Eberhart</h4>
                 <h5 class="playfair-display">Conductor</h5>
                 <h6 class="playfair-display">Johannes is a third-year Violin Performance and Music Education double major at UCLA. He studies violin with Varty Manouelian and Movses Pogossian, as well as viola with Brian Chen. Outside of UCLA, Johannes is also a violinist in California Young Artists Symphony and has played with LA Camerata. Additionally, he is an active teacher and is president of the UCLA ASTA Chapter. As a conductor, Johannes has shared the stage with members of the LA Phil at a Dilijan Chamber Music Series concert, collaborated with the UCLA Saxophone Studio, and put on chamber orchestra music recitals. This is his first year conducting CBSO, and he is so happy to work with everyone.</h6>
             </section>
         </section>
 
-        <section class="profile">
+        <section id="profile-b" class="profile" data-title="Meet Our Conductors">
             <img src="nathan-cbso.jpg" class="profile-photo">
-            <section class="profile-text">
+            <section class="profile-text" data-title="Meet Our Conductors">
                 <h4 class="playfair-display">Nathan Ng</h4>
                 <h5 class="playfair-display">Assistant Conductor</h5>
                 <h6 class="playfair-display">Nathan is a second-year Biology major and former ethnomusicology major. He is passionate about conducting, led rehearsals in his high school orchestra, and previously served as concertmaster and principal violist. He has performed on the violin with the California Orchestra Directors Association Honors String Orchestra in San Diego, under the baton of Dr. Alexander Kahn; the Contra Costa Chamber Orchestra; the Diablo Symphony Orchestra; two-time Grammy Award-winning violinist Mads Tolling, and the UCLA Symphony Orchestra.</h6>
@@ -85,8 +90,8 @@
     </div>
 
     <div id="about-us" class="directors">
-        <h3 class="playfair-display">History of CBSO</h3>
-        <section class="profile">
+        <h3 id="section-title-c-desktop" class="playfair-display">History of CBSO</h3>
+        <section class="profile" data-title="History of CBSO">
             <h6 class="playfair-display">The Los Angeles Philharmonic, under the vibrant leadership of Music & Artistic Director Gustavo Dudamel, presents an inspiring array of music through a commitment to foundational works and adventurous explorations. Both at home and abroad, the LA Phil—recognized as one of the world’s outstanding orchestras—is leading the way in groundbreaking and diverse programming that reflects its artistry and demonstrates its vision. 
 
 More than 250 concerts are either performed or presented by the LA Phil at the Frank Gehry designed Walt Disney Concert Hall, The Ford, Beckman YOLA Center, and the famed Hollywood Bowl. Collectively, the presentations at the LA Phil’s four iconic venues represent a breadth and depth unrivaled by other orchestras or cultural institutions.  
@@ -143,8 +148,6 @@ Since 2003, the LA Phil’s winter home has been the landmark Walt Disney Concer
         opacity: 0,  
     });
 
-
-
     gsap.to(".upcoming", {
         scrollTrigger: {
             trigger: "#conductors-A",
@@ -156,6 +159,7 @@ Since 2003, the LA Phil’s winter home has been the landmark Walt Disney Concer
         opacity: 0,
     });
 
+ 
 
     gsap.to("#conductors-A", {
         scrollTrigger: {
@@ -166,5 +170,57 @@ Since 2003, the LA Phil’s winter home has been the landmark Walt Disney Concer
         },
         opacity: 0,  
     });
+
+    if (window.innerWidth <= 767) {
+        gsap.to("#link-box-a", {
+        scrollTrigger: {
+            trigger: "#link-box-b",
+            start: "top bottom-=100",
+            end: "top center",
+            scrub: true,
+            markers: true,
+            },
+            opacity: 0,
+        });   
+
+        gsap.to("#profile-a", {
+            scrollTrigger: {
+            trigger: "#profile-b",
+            start: "top bottom",        
+            end: "top bottom-=200",      
+            scrub: true,              
+            },
+            opacity: 0,  
+        });
+    }
+
+
+    const title = document.getElementById('mobile-section-titles');
+    const sections = document.querySelectorAll('section');
+    let currentTitle = title.textContent;
+
+    const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        const newTitle = entry.target.dataset.title;
+        if (newTitle !== currentTitle) {
+            
+            title.classList.remove('rotate-in');
+            title.classList.add('rotate-out');
+
+            setTimeout(() => {
+            
+            title.textContent = newTitle;
+            title.classList.remove('rotate-out');
+            title.classList.add('rotate-in');
+            currentTitle = newTitle;
+            }, 400); 
+        }
+        }
+    });
+    }, { threshold: 0.5 });
+
+    sections.forEach(section => observer.observe(section));
 
 </script>
