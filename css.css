@@ -677,7 +677,50 @@ footer .foot {
     #footer{
         display: none;
     }
+
+
+    #board-header, #alum-header{
+        display: none;
+    }
+
+
+    .board .profile-photo{
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .board .profile {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: 1rem;
+        height: auto;
+        position: static;
+        margin-bottom: 1rem;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .board .profile-text{
+        width: 30vw;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+
+    .board .profile-text h5{
+        font-size: 3.5vw;
+    }
+
+    .board .profile-text h4{
+        font-size: 4vw;
+    }
+
 }
+
+#alum{
+    display: none;
+}
+
+
 
 
 
