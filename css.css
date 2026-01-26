@@ -530,9 +530,9 @@ footer .foot {
 
         background: linear-gradient(
             to top,
-            rgba(243, 238, 244, 0),
-            rgba(243, 238, 244, 0.87),
-            rgb(243, 238, 244)
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, 0.87),
+            rgb(255, 255, 255)
         );
 
         height: 12vh;
