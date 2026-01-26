@@ -4,11 +4,11 @@
   box-sizing: border-box;
 }
 
-
-body{
+body {
     width: 100%;
     background-color: white;
 }
+
 
 .mobile-section-titles{
     display: none;
@@ -116,7 +116,11 @@ h5{
 
 h6{
     font-size: 1vw;
-    color: black;
+    color: rgb(0, 0, 0);
+}
+
+#about-us h6{
+    color: rgb(0, 0, 0);
 }
 
 .season{
@@ -391,6 +395,7 @@ h6{
 
 #about-us{
     height: 80vh;
+    filter: blur(20px);
 }
 
 footer{
@@ -689,6 +694,11 @@ footer .foot {
 
     h6{
         font-size: 3vw;
+    }
+
+    #about-us h6{
+        color: rgb(255, 255, 255);
+        mix-blend-mode: difference;
     }
 
     #footer{

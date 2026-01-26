@@ -153,9 +153,10 @@
         trigger: ".video-container",
         start: "top top",        
         end: "bottom center",      
-        scrub: true
+        scrub: 1.5
         },
-        opacity: 0,  
+        opacity: 0,
+        filter: "blur(6px)"
     });
 
     gsap.to(".upcoming", {
@@ -163,10 +164,11 @@
             trigger: "#conductors-A",
             start: "top 90%",
             end: "top center",
-            scrub: true
+            scrub: 1.5
             
         },
         opacity: 0,
+        filter: "blur(6px)"
     });
 
  
@@ -176,10 +178,25 @@
         trigger: "#about-us",
         start: "top bottom",        
         end: "top center",      
-        scrub: true              
+        scrub: 1.5              
         },
-        opacity: 0,  
+        opacity: 0,
+        filter: "blur(6px)" 
     });
+
+    gsap.to("#about-us", {
+        filter: "blur(0px)",
+        opacity: 1,                  
+        scrollTrigger: {
+            trigger: "#about-us",
+            start: "top bottom",  
+            end: "top center-=200",    
+            scrub: 1.5
+        }
+    });
+
+
+
 
     if (window.innerWidth <= 767) {
         gsap.to("#link-box-a", {
@@ -187,10 +204,10 @@
             trigger: "#link-box-b",
             start: "top bottom-=100",
             end: "top center",
-            scrub: true,
-            
+            scrub: 1.5
             },
             opacity: 0,
+            filter: "blur(6px)"
         });   
 
         gsap.to("#profile-a", {
@@ -198,11 +215,35 @@
             trigger: "#profile-b",
             start: "top bottom",        
             end: "top bottom-=200",      
-            scrub: true              
+            scrub: 1.5              
             },
-            opacity: 0,  
+            opacity: 0,
+            filter: "blur(6px)" 
+        });
+
+        gsap.to("body", {
+            backgroundColor: "#000",
+            color: "#fff",
+            scrollTrigger: {
+                trigger: "#about-us",
+                start: "top 70%",
+                end: "bottom bottom",
+                scrub: 1.5,
+                ease: "power1.out"
+            }
+        });
+
+        gsap.to(".mobile-fade", {
+        opacity: 0,
+        scrollTrigger: {
+            trigger: "#about-us",
+            start: "top 70%",
+            end: "top 30%",
+            scrub: true
+        }
         });
     }
+
 
 
     const title = document.getElementById('mobile-section-titles');
