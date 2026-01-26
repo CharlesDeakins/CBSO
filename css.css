@@ -539,7 +539,7 @@ footer .foot {
         background: linear-gradient(
         to top,
         rgba(243, 238, 244, 0),
-        rgba(243, 238, 244, 0.836),
+        rgba(255, 255, 255, 0.836),
         rgb(255, 255, 255) 
         );
 
@@ -549,6 +549,7 @@ footer .foot {
         position: fixed;
         top: 0;
     }
+
 
     header .logo{
         height: 11vw;
