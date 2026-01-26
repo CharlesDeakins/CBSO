@@ -23,7 +23,20 @@
     <a href="#footer" class="oswald" style="margin-left: 10vw;">CONTACT</a>
     <a href="#conductors-A" class="oswald" style="margin-left: 20.5vw;">ABOUT US</a>
     <a href="members.html" class="oswald" style="margin-left: 32vw;">MEMBERS</a>
-    <a class="link-button">_<br>_<br>_<br></a>
+    <a class="link-button" id="menuToggle">_<br>_<br>_<br></a>
+
+    <div id="mobileMenu">
+        <nav class="menu-links">
+            <a href="#conductors-A">About Us</a>
+            <a href="members.html">Members</a>
+            <br><br><br>
+            <a href="https://www.instagram.com/cbso.ucla/?hl=en">Instagram</a>
+            <a href="https://www.youtube.com/@conbriostringorchestra">Youtube</a>
+            <a href="https://www.facebook.com/cbso.ucla/">Facebook</a>
+            <a href="https://www.linkedin.com/company/con-brio-string-orchestra">Linkedin</a>
+            <a href="mailto:cbso.ucla@gmail.com">Email</a>
+        </nav>
+    </div>
 </header>
 
 
@@ -217,5 +230,19 @@
     }, { threshold: 0.5 });
 
     sections.forEach(section => observer.observe(section));
+
+
+    const toggle = document.getElementById('menuToggle');
+    const menu = document.getElementById('mobileMenu');
+
+    toggle.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.menu-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.remove('active');
+        });
+    });
 
 </script>

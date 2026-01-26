@@ -50,6 +50,7 @@ header a{
 
 .link-button{
     display: none;
+    z-index: 2000;
 }
 
 a{
@@ -676,4 +677,55 @@ footer .foot {
     #footer{
         display: none;
     }
+}
+
+
+
+#mobileMenu {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.03);
+  filter: blur(6px);
+  backdrop-filter: blur(50px);
+  transition:
+    opacity 1s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 1s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s linear 1s;
+  z-index: 1000;
+}
+
+#mobileMenu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  filter: blur(0);
+  transition-delay: 0s;
+}
+
+
+.menu-links {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+}
+
+.menu-links a {
+    position: relative;
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    color: rgb(195, 198, 177);
+    font-size: 4vw;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.menu-links a:hover {
+  opacity: 0.6;
 }
