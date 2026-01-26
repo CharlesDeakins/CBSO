@@ -536,7 +536,12 @@ footer .foot {
 
         z-index: 0;
 
-        background: red;
+        background: linear-gradient(
+            to top,
+            rgba(243, 238, 244, 0),
+            rgba(243, 238, 244, 0.87),
+            rgb(243, 238, 244)
+        );
 
         height: 12vh;
         width: 100%;
