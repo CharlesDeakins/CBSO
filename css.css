@@ -9,6 +9,7 @@ header{
     padding: 0;
 }
 
+
 body{
     background-color: rgb(243, 238, 244);
     width: 100%;
@@ -524,7 +525,30 @@ footer .foot {
   transform: translateY(0);
 }
 
+.mobile-fade{
+    display: none;
+}
+
 @media (max-width: 768px) {
+
+    .mobile-fade{
+        display: block;
+
+        z-index: 0;
+
+        background: linear-gradient(
+        to top,
+        rgba(243, 238, 244, 0),
+        rgba(243, 238, 244, 0.836),
+        rgb(255, 255, 255) 
+        );
+
+        height: 12vh;
+        width: 100%;
+
+        position: fixed;
+        top: 0;
+    }
 
     header .logo{
         height: 11vw;
@@ -723,10 +747,6 @@ footer .foot {
 #alum{
     display: none;
 }
-
-
-
-
 
 #mobileMenu {
   position: fixed;
